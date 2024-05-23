@@ -1,0 +1,21 @@
+@use '../../../config/scss/colors' as colors;
+@use '../../../config/scss/_font.scss' as fonts;
+
+.search__input {
+    background-color: colors.$semi-black;
+    border: 1px solid colors.$grey;
+    border-radius: 12px;
+    padding: 12px 20px 12px 20px;
+    width: 320px;
+    color: colors.$white;
+
+
+    &::placeholder {
+        line-height: 135%;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: colors.$grey;
+        width: fit-content;
+        font-family: fonts.$primary;
+    }
+  }

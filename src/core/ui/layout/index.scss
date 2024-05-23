@@ -1,10 +1,16 @@
 @use '../core/config/scss' as config;
 @use '../core/lib/scss' as lib;
+@use '../../config/scss/_breakpoints.scss' as breakpoints;
 
 .layout {
   display: flex;
   min-height: 200vh;
   flex-direction: column;
+  min-width: breakpoints.$sm;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
 
   &__header {
     position: sticky;
