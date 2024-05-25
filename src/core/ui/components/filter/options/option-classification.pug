@@ -1,0 +1,14 @@
+.option__element.classification
+    .option__container
+        h3.option__title Classification
+        button.option__button(type="button")
+            svg.option__icon
+                use(xlink:href="./assets/icons/default/sprite.svg#arrow_options")
+    ul.option__list
+        - var idCounter = 0
+        each classification in ['100% Indica', '100% Sativa', '>50% Indica', '>50% Sativa']
+            - var id = 'classification-' + idCounter++
+            li.option__item
+                label.option__label(for=id)
+                    input.option__input(type="checkbox" name="classification" value=classification.replace(' ', '-').toLowerCase() id=id)
+                    span.option__description= classification

@@ -3,11 +3,21 @@
 @use '../core/ui/layout';
 @use '../core/config/scss/_colors.scss' as colors;
 @use '../core/config/scss/_font.scss' as font;
-//blocks
+
+//BLOCKS
+
+//Header
 @use '../core/ui/scss/header/header.scss';
 @use '../core/ui/scss/header/search.scss';
 @use '../core/ui/scss/header/plant-type.scss';
-//global
+//Main
+@use '../core/ui/scss/filters/slider.scss';
+@use '../core/ui/scss/filters/filters.scss';
+@use '../core/ui/scss/filters/form.scss';
+@use '../core/ui/scss/filters/badge.scss';
+@use '../core/ui/scss/filters/options.scss';
+
+//GLOBAL
 @use '../core/ui/scss/fonts.scss';
 
 * {
@@ -51,6 +61,10 @@ a {
   display: block;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 

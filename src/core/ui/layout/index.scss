@@ -1,6 +1,7 @@
 @use '../core/config/scss' as config;
 @use '../core/lib/scss' as lib;
 @use '../../config/scss/_breakpoints.scss' as breakpoints;
+@use '../../config/scss/_colors.scss' as colors;
 
 .layout {
   display: flex;
@@ -9,12 +10,15 @@
   min-width: breakpoints.$sm;
   min-height: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
 
   &__header {
     position: sticky;
     top: 0;
+    z-index: 99;
+    background-color: colors.$semi-black;
   }
 
 
@@ -24,5 +28,6 @@
 
   &__footer {
     margin-top: auto;
+    min-height: 128px;
   }
 }

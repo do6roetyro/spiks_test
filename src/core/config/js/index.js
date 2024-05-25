@@ -18,4 +18,6 @@
     breakpoints,
     // ...
   };
+
 })(window);
+

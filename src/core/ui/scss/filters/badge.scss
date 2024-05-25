@@ -1,0 +1,25 @@
+@use "../../../lib/scss/_flex.scss" as flex;
+
+.badge__item {
+    border-radius: 20px;
+    padding: 5px 8px;
+    box-shadow: inset -5px -5px 16px 0 rgba(138, 138, 138, 0.09);
+    background: #297019;
+
+    @include flex.row;
+    @include flex.center;
+    gap: 3px;
+}
+
+.badge__icon {
+width: 16px;
+height: 16px;
+background-color: transparent;
+}
+
+.badge__button {
+    background-color: transparent;
+    border: none;
+    @include flex.row;
+    @include flex.center;
+}

@@ -1,8 +1,13 @@
 @use '../../../lib/scss/_flex.scss' as flex;
+@use "../../../config/scss/_font.scss" as font;
 
 .header {
     min-height: 48px;
-    
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: inherit;
+    position: relative;
+    z-index: 99;
 }
 
 .header__container {
@@ -17,5 +22,16 @@
     font-size: 30px;
     line-height: 30px;
     letter-spacing: 1%;
-    font-weight: 700;
+    font-weight: font.$weight-bold;
+    transition: text-shadow 0.2s ease, transform 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            text-shadow: 0px 5px 10px rgba(132, 213, 44, 0.5);
+         } 
+ 
+         &:active {
+             transform: translateY(1px);
+         } 
+    }
 }
