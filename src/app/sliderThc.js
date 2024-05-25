@@ -22,8 +22,8 @@ sliderThc.noUiSlider.on('update', (values, handle) => {
     thcValue.value = `${Math.round(values[handle])}%`;
 });
 
-thcValue.addEventListener('change', () => {
-    sliderThc.noUiSlider.set(this.value);
+thcValue.addEventListener('change', (event) => {
+    sliderThc.noUiSlider.set(event.target.value); 
 });
 
 toggleTooltips(sliderThc); 

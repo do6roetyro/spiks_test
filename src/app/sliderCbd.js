@@ -22,8 +22,8 @@ sliderCbd.noUiSlider.on('update', (values, handle) => {
     cbdValue.value = `${Math.round(values[handle])}%`;
 });
 
-cbdValue.addEventListener('change', () => {
-    sliderCbd.noUiSlider.set(this.value);
+cbdValue.addEventListener('change', (event) => {
+    sliderCbd.noUiSlider.set(event.target.value); 
 });
 
 toggleTooltips(sliderCbd); 

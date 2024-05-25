@@ -11,15 +11,15 @@ noUiSlider.create(sliderPrice, {
         'min': 0,
         'max': 9999
     },
-    format : {
+    format: {
         to: (value) => Math.round(value),
         from: (value) => Math.round(value),
-      },
-      tooltips: {
+    },
+    tooltips: {
         to: (value) => `${Math.round(value)}$`,
         from: (value) => Number(value.replace('$', ''))
     }
-   
+
 });
 
 sliderPrice.noUiSlider.on('update', function (values, handle) {
@@ -31,13 +31,26 @@ sliderPrice.noUiSlider.on('update', function (values, handle) {
     }
 });
 
-priceMin.addEventListener('change', function () {
-    sliderPrice.noUiSlider.set([this.value, null]);
+priceMin.addEventListener('change', (event) => {
+    const minPrice = parseFloat(event.target.value.replace('$', ''));
+    const maxPrice = parseFloat(priceMax.value.replace('$', ''));
+
+    if (minPrice > maxPrice || isNaN(minPrice) || isNaN(maxPrice)) {
+        return;
+    }
+
+    sliderPrice.noUiSlider.set([minPrice, null]);
 });
 
-priceMax.addEventListener('change', function () {
-    sliderPrice.noUiSlider.set([null, this.value]);
+priceMax.addEventListener('change', (event) => {
+    const maxPrice = parseFloat(event.target.value.replace('$', ''));
+    const minPrice = parseFloat(priceMin.value.replace('$', ''));
+
+    if (maxPrice < minPrice || isNaN(maxPrice) || isNaN(minPrice)) {
+        return;
+    }
+
+    sliderPrice.noUiSlider.set([null, maxPrice]);
 });
 
 toggleTooltips(sliderPrice);
-
