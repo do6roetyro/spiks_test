@@ -4,4 +4,5 @@
 // =require ./sliderThc.js
 // =require ./sliderCbd.js
 // =require ./optionMenuHandle.js
+// =require ./optionCheckboxHandle.js
 

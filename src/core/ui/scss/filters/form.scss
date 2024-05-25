@@ -25,4 +25,12 @@
     padding-right: 20px;
     font-weight: font.$weight-semibold;
     line-height: 135%;
+    align-self: flex-start;
+    flex-shrink: 0
+}
+
+.form__badge {
+    @include flex.row;
+    flex-wrap: wrap;
+    gap: 10px;
 }

@@ -8,13 +8,8 @@
 
     @include flex.row;
     @include flex.center;
+    justify-content: space-between;
     gap: 3px;
-}
-
-.badge__icon {
-width: 16px;
-height: 16px;
-background-color: transparent;
 }
 
 .badge__button {
@@ -22,4 +17,13 @@ background-color: transparent;
     border: none;
     @include flex.row;
     @include flex.center;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url("../assets/media/badge_cross.svg");
+        background-repeat: no-repeat;
+    }
 }
