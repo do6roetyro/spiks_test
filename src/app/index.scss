@@ -16,6 +16,7 @@
 @use '../core/ui/scss/filters/form.scss';
 @use '../core/ui/scss/filters/badge.scss';
 @use '../core/ui/scss/filters/options.scss';
+@use '../core/ui/scss/filters/sort.scss';
 
 //GLOBAL
 @use '../core/ui/scss/fonts.scss';
@@ -50,7 +51,7 @@ body {
   font-style: normal;
   font-weight: font.$weight;
   font-size: font.$size;
-  line-height: normal;
+  line-height: 135%;
   color: colors.$white;
   margin: 0;
   text-wrap: balance;

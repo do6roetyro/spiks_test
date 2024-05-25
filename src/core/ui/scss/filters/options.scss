@@ -12,8 +12,12 @@
     background-position: left center;
     background-size: auto;
 
+    border: 1px solid rgba(107, 171, 43, 0.5);
+
     @include flex.col;
     gap: 15px;
+
+    align-self: flex-start;
 }
 
 .option__title {

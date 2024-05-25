@@ -2,18 +2,26 @@ section.filters
         h2.visually-hidden Фильтр для поиска
         form#filters.filters__form.form
             .form__plant-types
+                h3.visually-hidden Тип растения
                 include ../core/ui/components/filter/plant-type/plant-type.pug
                 +plant-type
             .form__sliders
+                h3.visually-hidden Стоимость, велчина THC и СBD
                 include ../core/ui/components/filter/sliders/slider-price.pug
                 include ../core/ui/components/filter/sliders/slider-thc.pug
                 include ../core/ui/components/filter/sliders/slider-cbd.pug
                 include ../core/ui/components/filter/sliders/slider-nose.pug
-            .form__container
-                p.form__result-value 1034,5 Results
+            .form__container       
+                p.form__result-value 1034,5 Results   
                 .form__badge
+                    h3.visually-hidden Примененные фильтры
                     include ../core/ui/components/filter/badge.pug
-            .form__options.options
-                    include ../core/ui/components/filter/options/option-classification.pug
-                    include ../core/ui/components/filter/options/option-prod_method.pug
-                    include ../core/ui/components/filter/options/option-size.pug
+            .form__container 
+                .form__options.options
+                        h3.visually-hidden Дополнительные параметры
+                        include ../core/ui/components/filter/options/option-classification.pug
+                        include ../core/ui/components/filter/options/option-prod_method.pug
+                        include ../core/ui/components/filter/options/option-size.pug
+                .form__sort.sort
+                        h3.visually-hidden Вид сортировки
+                        include ../core/ui/components/filter/sort.pug

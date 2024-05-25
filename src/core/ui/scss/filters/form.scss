@@ -19,12 +19,16 @@
     @include flex.row;
     align-items: center;
     gap: 10px;
+
+    &:last-child {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
 
 .form__result-value {
     padding-right: 20px;
     font-weight: font.$weight-semibold;
-    line-height: 135%;
     align-self: flex-start;
     flex-shrink: 0
 }

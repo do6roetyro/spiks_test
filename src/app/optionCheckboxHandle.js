@@ -18,16 +18,19 @@ function createBadge(checkbox) {
     const badgeItem = document.createElement('div');
     const badgeDescription = document.createElement('span');
     const badgeButton = document.createElement('button');
+    const badgeButtoninfo = document.createElement('span');
     badgeItem.classList.add('badge__item');
     badgeDescription.classList.add('badge__description');
     badgeDescription.textContent = label.textContent.trim();
     badgeButton.classList.add('badge__button');
+    badgeButtoninfo.classList.add('visually-hidden');
+    badgeButtoninfo.textContent = 'удалить этот фильтр';
 
     badgeButton.addEventListener('click', function() {
         badgeItem.remove(); 
         checkbox.checked = false; 
     });
-
+    badgeButton.appendChild(badgeButtoninfo)
     badgeItem.appendChild(badgeDescription);
     badgeItem.appendChild(badgeButton);
     badgeContainer.appendChild(badgeItem);
