@@ -10,7 +10,6 @@ checkboxes.forEach(checkbox => {
     });
 });
 
-// Функция для создания бейджа
 function createBadge(checkbox) {
     const label = checkbox.nextElementSibling; 
     const badgeContainer = document.querySelector('.form__badge');
