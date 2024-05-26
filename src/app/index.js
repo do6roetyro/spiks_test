@@ -6,3 +6,5 @@
 // =require ./optionMenuHandle.js
 // =require ./optionCheckboxHandle.js
 // =require ./sortMenuHandle.js
+// =require ./sliderNose.js
+

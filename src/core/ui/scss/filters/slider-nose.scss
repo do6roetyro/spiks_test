@@ -1,0 +1,45 @@
+@use "../../../lib/scss/_flex.scss" as flex;
+
+.slider-nose {
+    @include flex.row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.slider-nose__label {
+    cursor: pointer;
+    width: 4px;
+    height: 20px;
+    background: #30303d;
+    display: block;
+}
+
+.slider-nose__item:nth-child(5),
+.slider-nose__item:last-child {
+    .slider-nose__label {
+        height: 28px;
+    }
+}
+
+.slider-nose__item.active:nth-child(-n + 5) {
+    .slider-nose__label {
+        background: mix(#ffd964, #58aa46, 80%);
+    }
+}
+
+.slider-nose__item.active:nth-child(5) {
+    .slider-nose__label {
+        background: mix(#ffd964, #58aa46, 50%);
+    }
+}
+
+.slider-nose__item.active:nth-child(n + 6):nth-child(-n + 10) {
+    .slider-nose__label {
+        background: mix(#58aa46, #ffd964, 80%);
+    }
+}
+
+.slider-nose__input {
+    display: none;
+}

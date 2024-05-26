@@ -76,6 +76,10 @@
     .noUi-horizontal .noUi-tooltip {
         bottom: 95%;
     }
+
+    &--nose {
+        align-self: flex-start;
+    }
 }
 
 .noUi-tooltip.visible {
@@ -86,6 +90,10 @@
 .slider__title {
     padding-bottom: 24px;
     width: fit-content;
+
+    &--nose {
+        padding-bottom: 12px;
+    }
 }
 
 .slider__container {
@@ -97,6 +105,10 @@
     &--oneinput {
         justify-content: flex-end;
     }
+}
+
+.slider__container.slider-nose {
+    padding-top: 0;
 }
 
 .slider__input {

@@ -71,15 +71,6 @@
         background-position: center;
     }
 
-    &::after {
-        content: "";
-        display: block;
-        width: 5px;
-        height: 9px;
-        background-position: center;
-        position: absolute;
-    }
-
     &--date-new-first,
     &--date-old-first {
         &::before {
@@ -98,25 +89,54 @@
         }
     }
 
-    &--total-thc-high-first,
+    &--total-thc-high-first {
+        &::before {
+            width: 28px;
+            height: 28px;
+            background-image: url("../assets/media/thc_green.svg");
+            background-size: 62px 62px;
+            background-position: -9px -1px;
+        }
+    }
+
     &--total-thc-low-first {
         &::before {
-            background-image: url("../assets/media/thc.svg");
+            width: 28px;
+            height: 28px;
+            background-image: url("../assets/media/thc_red.svg");
+            background-position: 1px 3px;
+            background-size: 36px 36px;
         }
     }
 
-    &--total-thc-high-first {
-        &::after {
-            background-image: url("../assets/media/vector_green.svg");
-            z-index: 1;
-            transform: rotate(30deg);
+    &--total-cbd-high-first {
+        &::before {
+            width: 28px;
+            height: 28px;
+            background-image: url("../assets/media/cbd_green.svg");
+            background-size: 62px 62px;
+            background-position: -9px -1px;
         }
     }
 
-    &--total-cbd-high-first,
     &--total-cbd-low-first {
         &::before {
-            background-image: url("../assets/media/cbd.svg");
+            width: 28px;
+            height: 28px;
+            background-image: url("../assets/media/cbd_red.svg");
+            background-position: 1px 3px;
+            background-size: 36px 36px;
+        }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            text-shadow: 3px 2px 5px rgba(132, 213, 44, 0.5);
+            opacity: 0.8;
+        }
+
+        &:active {
+            transform: translateY(1px);
         }
     }
 }
