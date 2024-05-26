@@ -9,11 +9,6 @@
     @include flex.center;
 }
 
-.sort__icon {
-    width: 24px;
-    height: 24px;
-}
-
 .sort__container {
     border: 1px solid rgba(107, 171, 43, 0.5);
     border-radius: 10px;
@@ -50,9 +45,73 @@
     overflow-y: hidden;
 }
 
+.sort__item {
+    @include flex.row;
+    gap: 10px;
+}
+
 .sort__list.visible {
     max-height: 1000px;
     padding: 20px;
+}
+
+.sort__icon-button {
+    width: 24px;
+    height: 24px;
+}
+
+.sort__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+
+    &--price-low-first {
+        transform: rotate(180deg);
+    }
+
+    &--total-thc-high-first {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        use {
+            transform: scale(2.3) translate(-4.5px, -1px);
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    &--total-thc-low-first {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        use {
+            transform: scale(1.4) translate(-0.5px, 1px);
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    &--total-cbd-high-first {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        use {
+            transform: scale(2.3) translate(-4.5px, -1px);
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    &--total-cbd-low-first {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        use {
+            transform: scale(1.4) translate(-0.6px, 1px);
+            position: relative;
+            left: 1px;
+        }
+    }
 }
 
 .sort__description {
@@ -61,73 +120,6 @@
     gap: 10px;
     position: relative;
     cursor: pointer;
-
-    &::before {
-        content: "";
-        display: block;
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    &--date-new-first,
-    &--date-old-first {
-        &::before {
-            background-image: url("../assets/media/calendar.svg");
-        }
-    }
-    &--price-high-first,
-    &--price-low-first {
-        &::before {
-            background-image: url("../assets/media/arrow_sort.svg");
-        }
-    }
-    &--price-low-first {
-        &::before {
-            transform: rotate(180deg);
-        }
-    }
-
-    &--total-thc-high-first {
-        &::before {
-            width: 28px;
-            height: 28px;
-            background-image: url("../assets/media/thc_green.svg");
-            background-size: 62px 62px;
-            background-position: -9px -1px;
-        }
-    }
-
-    &--total-thc-low-first {
-        &::before {
-            width: 28px;
-            height: 28px;
-            background-image: url("../assets/media/thc_red.svg");
-            background-position: 1px 3px;
-            background-size: 36px 36px;
-        }
-    }
-
-    &--total-cbd-high-first {
-        &::before {
-            width: 28px;
-            height: 28px;
-            background-image: url("../assets/media/cbd_green.svg");
-            background-size: 62px 62px;
-            background-position: -9px -1px;
-        }
-    }
-
-    &--total-cbd-low-first {
-        &::before {
-            width: 28px;
-            height: 28px;
-            background-image: url("../assets/media/cbd_red.svg");
-            background-position: 1px 3px;
-            background-size: 36px 36px;
-        }
-    }
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
