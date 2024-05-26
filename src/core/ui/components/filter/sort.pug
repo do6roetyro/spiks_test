@@ -5,8 +5,11 @@
             use(xlink:href="./assets/icons/default/sprite.svg#sort")
 ul.sort__list
     p.sort__title Sort by:
-    each item in ['Date (New first)', 'Date (Old first)', 'Price (High first)', 'Price (Low first)', 'Total THC (High first)', 'Total THC (Low first)', 'Total CBD (High first)', 'Total CBD (Low first)']
+    each item, index in ['Date (New first)', 'Date (Old first)', 'Price (High first)', 'Price (Low first)', 'Total THC (High first)', 'Total THC (Low first)', 'Total CBD (High first)', 'Total CBD (Low first)']
         - const itemId = item.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, ''); 
+        - const iconMap = ['calendar', 'calendar', 'arrow_sort', 'arrow_sort', 'thc_green', 'thc_red', 'cbd_green', 'cbd_red']
         li.sort__item(class=`sort__item--${itemId}`)
+            svg.sort__icon(class=`sort__icon--${itemId}`)
+                use(xlink:href=`./assets/icons/default/sprite.svg#${iconMap[index]}`)
             input.sort__input(id=itemId type="radio" name="sort-by" value=itemId)
             label.sort__description(class=`sort__description--${itemId}`)(for=itemId)= item
