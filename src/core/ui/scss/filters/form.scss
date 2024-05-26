@@ -1,5 +1,6 @@
 @use "../../../lib/scss/_flex.scss" as flex;
 @use "../../../config/scss/_font.scss" as font;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
 
 .form {
     @include flex.col;
@@ -13,12 +14,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 8px;
+
+    @media (min-width: breakpoints.$md) {
+        justify-content: flex-start;
+    }
 }
 
 .form__container {
     @include flex.row;
     align-items: center;
     gap: 10px;
+    min-height: 32px;
 
     &:last-child {
         justify-content: space-between;

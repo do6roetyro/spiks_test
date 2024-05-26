@@ -1,10 +1,25 @@
 @use "../../../lib/scss/_flex.scss" as flex;
 @use "../../../config/scss/_font.scss" as font;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
 
 .plant-type {
     @include flex.row;
     flex-wrap: wrap;
     gap: 16px;
+
+    @media (min-width: breakpoints.$lg) and (max-width: 1489px) {
+        position: absolute;
+        right: 88px;
+        top: 20px;
+        z-index: 15;
+    }
+
+    @media (min-width: 1489px) {
+        position: absolute;
+        right: clamp(239px, 10vw, 300px);
+        top: 20px;
+        z-index: 15;
+    }
 }
 
 .plant-type__icon {

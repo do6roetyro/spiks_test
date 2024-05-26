@@ -8,16 +8,18 @@
   min-height: 200vh;
   flex-direction: column;
   min-width: breakpoints.$sm;
+  max-width: breakpoints.$xxl;;
   min-height: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
 
 
   &__header {
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 10;
     background-color: colors.$semi-black;
   }
 

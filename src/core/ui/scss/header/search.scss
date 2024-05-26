@@ -1,17 +1,25 @@
 @use "../../../config/scss/colors" as colors;
 @use "../../../config/scss/_font.scss" as fonts;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
 
 .search {
     position: relative;
+    flex-grow: 1;
+
+    @media (min-width: breakpoints.$lg) {
+        // width: clamp();
+    }
+
 }
 
 .search__input {
     background-color: colors.$semi-black;
     border: 1px solid colors.$grey;
     border-radius: 12px;
-    padding: 12px 20px 12px 20px;
+    padding: 15px 20px 15px 20px;
     padding-left: 48px;
-    width: 320px;
+    width: clamp(300px, 24vw, 469px);
+    max-width: 469px;
     color: colors.$white;
 
     &::placeholder {
@@ -26,13 +34,18 @@
     &:focus {
         padding-left: 20px;
     }
+
+    @media (min-width: 1489px) {
+        width: clamp(357px, 24vw, 640px);
+        max-width: 640px;
+    }
 }
 
 .search__icon {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 10px;
+    top: 13px;
     left: 20px;
 }
 

@@ -1,5 +1,6 @@
 @use '../../../lib/scss/_flex.scss' as flex;
 @use "../../../config/scss/_font.scss" as font;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
 
 .header {
     min-height: 48px;
@@ -7,7 +8,7 @@
     padding-top: 20px;
     background-color: inherit;
     position: relative;
-    z-index: 99;
+    z-index: 10;
 }
 
 .header__container {
@@ -16,6 +17,10 @@
     align-items: center;
     gap: 16px;
     padding-bottom: 16px;
+
+    @media(min-width: breakpoints.$lg) {
+        justify-content: flex-start;
+    }
 }
 
 .header__logo {
