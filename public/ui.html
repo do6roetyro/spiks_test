@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+  <title>Marketplace
+  </title>
+  <body>
+    <div class="layout">
+      <div class="layout__header">
+        <header class="header">
+          <div class="header__container"><a class="header__logo" href="ui.html">Marketplace</a>
+            <label class="header__search search" for="search"><span class="search__title visually-hidden">Поиск по сайту.</span>
+              <svg class="search__icon">
+                <use xlink:href="./assets/icons/default/sprite.svg#search"></use>
+              </svg>
+              <input class="search__input" id="search" type="text" placeholder="Search for a product, flower, etc">
+            </label>
+          </div>
+        </header>
+      </div>
+      <div class="layout__main">
+        <main class="main-container">
+          <h1 class="visually-hidden">Marketplace - сервис по продаже пахучих растений</h1>
+          <section class="filters">
+            <h2 class="visually-hidden">Фильтр для поиска</h2>
+            <form class="filters__form form" id="filters">
+              <div class="form__plant-types">
+                <h3 class="visually-hidden">Тип растения</h3>
+                                <div class="plant-types__list plant-type">
+                                                  <div class="plant-type__item">
+                                                    <label class="plant-type__label" for="buds">
+                                                      <input class="plant-type__input" type="checkbox" id="buds">
+                                                      <svg class="plant-type__icon">
+                                                        <use xlink:href="./assets/icons/default/sprite.svg#cannabis"></use>
+                                                      </svg><span class="plant-type__description">Buds</span>
+                                                      <assets/>
+                                                      <media/>
+                                                      <spiks-logo class="svg"></spiks-logo>
+                                                    </label>
+                                                  </div>
+                                                  <div class="plant-type__item">
+                                                    <label class="plant-type__label" for="edible">
+                                                      <input class="plant-type__input" type="checkbox" id="edible">
+                                                      <svg class="plant-type__icon">
+                                                        <use xlink:href="./assets/icons/default/sprite.svg#cannabis"></use>
+                                                      </svg><span class="plant-type__description">Edible</span>
+                                                      <assets/>
+                                                      <media/>
+                                                      <spiks-logo class="svg"></spiks-logo>
+                                                    </label>
+                                                  </div>
+                                                  <div class="plant-type__item">
+                                                    <label class="plant-type__label" for="non-edible">
+                                                      <input class="plant-type__input" type="checkbox" id="non-edible">
+                                                      <svg class="plant-type__icon">
+                                                        <use xlink:href="./assets/icons/default/sprite.svg#cannabis"></use>
+                                                      </svg><span class="plant-type__description">Non Edible</span>
+                                                      <assets/>
+                                                      <media/>
+                                                      <spiks-logo class="svg"></spiks-logo>
+                                                    </label>
+                                                  </div>
+                                                  <div class="plant-type__item">
+                                                    <label class="plant-type__label" for="concentrate">
+                                                      <input class="plant-type__input" type="checkbox" id="concentrate">
+                                                      <svg class="plant-type__icon">
+                                                        <use xlink:href="./assets/icons/default/sprite.svg#cannabis"></use>
+                                                      </svg><span class="plant-type__description">Concentrate</span>
+                                                      <assets/>
+                                                      <media/>
+                                                      <spiks-logo class="svg"></spiks-logo>
+                                                    </label>
+                                                  </div>
+                                </div>
+              </div>
+              <div class="form__sliders">
+                <h3 class="visually-hidden">Стоимость, велчина THC и СBD</h3>
+                <div class="form__slider slider">
+                  <h4 class="slider__title">Price Range, $</h4>
+                  <div class="slider__price" id="slider-price"></div>
+                  <div class="slider__container">
+                    <input class="slider__input" type="text" id="price_min">
+                    <input class="slider__input" type="text" id="price_max">
+                  </div>
+                </div>
+                <div class="form__slider slider">
+                  <h4 class="slider__title">THC, %</h4>
+                  <div class="slider__thc" id="slider-thc"></div>
+                  <div class="slider__container slider__container--oneinput">
+                    <input class="slider__input slider__input--small" type="text" id="thc_max">
+                  </div>
+                </div>
+                <div class="form__slider slider">
+                  <h4 class="slider__title">CBD, %</h4>
+                  <div class="slider__cbd" id="slider-cbd"></div>
+                  <div class="slider__container slider__container--oneinput">
+                    <input class="slider__input slider__input--small" type="text" id="cbd_max">
+                  </div>
+                </div>
+                <div class="form__slider slider slider--nose">
+                  <h4 class="slider__title slider__title--nose">Nose</h4>
+                  <div class="slider__nose" id="slider-nose"></div>
+                  <div class="slider__container slider-nose">
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-1"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-1" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-2"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-2" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-3"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-3" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-4"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-4" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-5"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-5" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-6"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-6" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-7"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-7" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-8"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-8" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-9"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-9" name="radio-group">
+                      </label>
+                    </div>
+                    <div class="slider-nose__item">
+                      <label class="slider-nose__label" for="radio-10"> 
+                        <input class="slider-nose__input radio-input" type="radio" id="radio-10" name="radio-group">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__container">      
+                <p class="form__result-value">1034,5 Results   </p>
+                <div class="form__badge">
+                  <h3 class="visually-hidden">Примененные фильтры</h3>
+                </div>
+              </div>
+              <div class="form__container"> 
+                <div class="form__options options">
+                  <h3 class="visually-hidden">Дополнительные параметры</h3>
+                  <div class="option__element classification">
+                    <div class="option__container">
+                      <h3 class="option__title">Classification</h3>
+                      <button class="option__button" type="button"><span class="visually-hidden">выбрать сорт</span>
+                        <svg class="option__icon">
+                          <use xlink:href="./assets/icons/default/sprite.svg#arrow_options"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="option__list">
+                      <li class="option__item">
+                        <label class="option__label" for="classification-0">
+                          <input class="option__input" type="checkbox" name="classification" value="100%-indica" id="classification-0"><span class="option__description">100% Indica</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="classification-1">
+                          <input class="option__input" type="checkbox" name="classification" value="100%-sativa" id="classification-1"><span class="option__description">100% Sativa</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="classification-2">
+                          <input class="option__input" type="checkbox" name="classification" value="&gt;50%-indica" id="classification-2"><span class="option__description">&gt;50% Indica</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="classification-3">
+                          <input class="option__input" type="checkbox" name="classification" value="&gt;50%-sativa" id="classification-3"><span class="option__description">&gt;50% Sativa</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="option__element production-method">
+                    <div class="option__container">
+                      <h3 class="option__title">Production Method</h3>
+                      <button class="option__button" type="button"><span class="visually-hidden">выбрать метод взращивания</span>
+                        <svg class="option__icon">
+                          <use xlink:href="./assets/icons/default/sprite.svg#arrow_options"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="option__list">
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-0">
+                          <input class="option__input" type="checkbox" name="production-method" value="indoor" id="production-method-0"><span class="option__description">Indoor</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-1">
+                          <input class="option__input" type="checkbox" name="production-method" value="outdoor" id="production-method-1"><span class="option__description">Outdoor</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-2">
+                          <input class="option__input" type="checkbox" name="production-method" value="greenhouse" id="production-method-2"><span class="option__description">Greenhouse</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-3">
+                          <input class="option__input" type="checkbox" name="production-method" value="light-deprivation" id="production-method-3"><span class="option__description">Light Deprivation</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-4">
+                          <input class="option__input" type="checkbox" name="production-method" value="mixed-light" id="production-method-4"><span class="option__description">Mixed Light</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="production-method-5">
+                          <input class="option__input" type="checkbox" name="production-method" value="other" id="production-method-5"><span class="option__description">Other</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="option__element size">
+                    <div class="option__container">
+                      <h3 class="option__title">Size</h3>
+                      <button class="option__button" type="button"><span class="visually-hidden">выбрать размер</span>
+                        <svg class="option__icon">
+                          <use xlink:href="./assets/icons/default/sprite.svg#arrow_options"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="option__list">
+                      <li class="option__item">
+                        <label class="option__label" for="size-0">
+                          <input class="option__input" type="checkbox" name="size" value="flower" id="size-0"><span class="option__description">Flower</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-1">
+                          <input class="option__input" type="checkbox" name="size" value="pre-roll-flower" id="size-1"><span class="option__description">Pre-Roll Flower</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-2">
+                          <input class="option__input" type="checkbox" name="size" value="pre-roll-infused" id="size-2"><span class="option__description">Pre-Roll Infused</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-3">
+                          <input class="option__input" type="checkbox" name="size" value="pre-roll-leaf" id="size-3"><span class="option__description">Pre-Roll Leaf</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-4">
+                          <input class="option__input" type="checkbox" name="size" value="shake" id="size-4"><span class="option__description">Shake</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-5">
+                          <input class="option__input" type="checkbox" name="size" value="smalls" id="size-5"><span class="option__description">Smalls</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-6">
+                          <input class="option__input" type="checkbox" name="size" value="trim" id="size-6"><span class="option__description">Trim</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-7">
+                          <input class="option__input" type="checkbox" name="size" value="keef" id="size-7"><span class="option__description">Keef</span>
+                        </label>
+                      </li>
+                      <li class="option__item">
+                        <label class="option__label" for="size-8">
+                          <input class="option__input" type="checkbox" name="size" value="fresh-frozen" id="size-8"><span class="option__description">Fresh Frozen</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form__sort sort">
+                  <h3 class="visually-hidden">Вид сортировки</h3>
+                  <div class="sort__container">
+                    <button class="sort__button" type="button"><span class="visually-hidden">отсортировать</span>
+                      <svg class="sort__icon">
+                        <use xlink:href="./assets/icons/default/sprite.svg#sort"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <ul class="sort__list">
+                    <p class="sort__title">Sort by:</p>
+                    <li class="sort__item sort__item--date-new-first">
+                      <input class="sort__input" id="date-new-first" type="radio" name="sort-by" value="date-new-first">
+                      <label class="sort__description sort__description--date-new-first" for="date-new-first">Date (New first)</label>
+                    </li>
+                    <li class="sort__item sort__item--date-old-first">
+                      <input class="sort__input" id="date-old-first" type="radio" name="sort-by" value="date-old-first">
+                      <label class="sort__description sort__description--date-old-first" for="date-old-first">Date (Old first)</label>
+                    </li>
+                    <li class="sort__item sort__item--price-high-first">
+                      <input class="sort__input" id="price-high-first" type="radio" name="sort-by" value="price-high-first">
+                      <label class="sort__description sort__description--price-high-first" for="price-high-first">Price (High first)</label>
+                    </li>
+                    <li class="sort__item sort__item--price-low-first">
+                      <input class="sort__input" id="price-low-first" type="radio" name="sort-by" value="price-low-first">
+                      <label class="sort__description sort__description--price-low-first" for="price-low-first">Price (Low first)</label>
+                    </li>
+                    <li class="sort__item sort__item--total-thc-high-first">
+                      <input class="sort__input" id="total-thc-high-first" type="radio" name="sort-by" value="total-thc-high-first">
+                      <label class="sort__description sort__description--total-thc-high-first" for="total-thc-high-first">Total THC (High first)</label>
+                    </li>
+                    <li class="sort__item sort__item--total-thc-low-first">
+                      <input class="sort__input" id="total-thc-low-first" type="radio" name="sort-by" value="total-thc-low-first">
+                      <label class="sort__description sort__description--total-thc-low-first" for="total-thc-low-first">Total THC (Low first)</label>
+                    </li>
+                    <li class="sort__item sort__item--total-cbd-high-first">
+                      <input class="sort__input" id="total-cbd-high-first" type="radio" name="sort-by" value="total-cbd-high-first">
+                      <label class="sort__description sort__description--total-cbd-high-first" for="total-cbd-high-first">Total CBD (High first)</label>
+                    </li>
+                    <li class="sort__item sort__item--total-cbd-low-first">
+                      <input class="sort__input" id="total-cbd-low-first" type="radio" name="sort-by" value="total-cbd-low-first">
+                      <label class="sort__description sort__description--total-cbd-low-first" for="total-cbd-low-first">Total CBD (Low first)</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
+        </main>
+      </div>
+      <div class="layout__footer">
+      </div>
+    </div>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>
