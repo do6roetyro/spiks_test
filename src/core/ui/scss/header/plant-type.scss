@@ -1,0 +1,65 @@
+@use "../../../lib/scss/_flex.scss" as flex;
+@use "../../../config/scss/_font.scss" as font;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
+
+.plant-type {
+    @include flex.row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (min-width: breakpoints.$lg) and (max-width: 1489px) {
+        position: absolute;
+        right: 88px;
+        top: 20px;
+        z-index: 15;
+    }
+
+    @media (min-width: 1489px) {
+        position: absolute;
+        right: clamp(239px, 10vw, 300px);
+        top: 20px;
+        z-index: 15;
+    }
+}
+
+.plant-type__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.plant-type__item {
+    background: linear-gradient(180deg, rgba(132, 213, 44, 0.33) 0%, #171722 100%);
+    padding: 1px;
+    border-radius: 10px;
+}
+
+.plant-type__label {
+    @include flex.row;
+    @include flex.center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: font.$weight-bold;
+
+    background: #353542;
+    transition: 0.3s ease;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            box-shadow: 0 3px 15px 0 rgba(132, 213, 44, 0.2);
+        } 
+
+        &:active {
+            transform: translateY(1px);
+        } 
+    }
+}
+
+.plant-type__input {
+    display: none;
+}
+
+.plant-type__label:has(.plant-type__input:checked) {
+    box-shadow: 0 3px 15px 0 rgba(132, 213, 44, 0.2);
+    background: #212129;
+}

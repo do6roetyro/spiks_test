@@ -1,0 +1,8 @@
+include ./plant-type-element.pug
+
+mixin plant-type
+    .plant-types__list.plant-type
+        +plantTypeElement('buds', 'Buds')
+        +plantTypeElement('edible', 'Edible')
+        +plantTypeElement('non-edible', 'Non Edible')
+        +plantTypeElement('concentrate', 'Concentrate')

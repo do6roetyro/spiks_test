@@ -1,0 +1,25 @@
+@use '../../config/scss/_font.scss' as font;
+
+@font-face {
+      font-family: 'Raleway';
+      src: url("../../assets/fonts/Raleway-Regular.woff2") format("woff2");
+      font-weight: font.$weight;
+      font-style: normal;
+      font-display: swap;
+    }
+  
+    @font-face {
+        font-family: 'Raleway';
+        src: url("../../assets/fonts/Raleway-SemiBold.woff2") format("woff2");
+        font-weight: font.$weight-semibold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Raleway';
+        src: url("../../assets/fonts/Raleway-Bold.woff2") format("woff2");
+        font-weight: font.$weight-bold;
+        font-style: normal;
+        font-display: swap;
+      }

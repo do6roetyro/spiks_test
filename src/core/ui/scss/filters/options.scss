@@ -1,0 +1,129 @@
+@use "../../../lib/scss/_flex.scss" as flex;
+
+.options {
+    padding: 15px 17px;
+    border-radius: 10px;
+    background: #353542;
+    width: fit-content;
+    min-width: 243px;
+
+    background-image: url("../assets/media/leaf.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto;
+
+    border: 1px solid rgba(107, 171, 43, 0.5);
+
+    @include flex.col;
+    gap: 15px;
+
+    align-self: flex-start;
+}
+
+.option__title {
+    font-size: 18px;
+    line-height: 135%;
+}
+
+.option__list {
+    @include flex.col;
+    gap: 5px;
+    max-height: 0;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: hidden;
+}
+
+.option__list.visible {
+    max-height: 1000px; 
+}
+
+.option__label {
+    line-height: 23.52px;
+    @include flex.row;
+    gap: 5px;
+    position: relative;
+    color: #959595;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.option__container {
+    @include flex.row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.option__button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    @include flex.row;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+.option__icon {
+    width: 12px;
+    height: 7px;
+}
+
+.option__icon.rotate {
+    transform: rotate(180deg);
+}
+
+.option__input {
+    display: none;
+}
+
+.option__description {
+    // padding-left: 20px;
+    @include flex.row;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    left: 1px;
+
+    &::before {
+        content: "";
+        display: block;
+        border-radius: 2px;
+        width: 15px;
+        height: 15px;
+        outline: 1px solid #fff;
+        border-radius: 2px;
+        opacity: 0.5;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.option__label:has(.option__input:checked) .option__description {
+    color: #fff;
+
+    &::before {
+        box-shadow: inset 3px 5px 12px 0 rgba(255, 255, 255, 0.36), 0 10px 27px 0 rgba(30, 29, 46, 0.3);
+        background: #84d52c;
+        opacity: 0.8;
+        outline: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 7px;
+        background-image: url("../assets/media/checkbox.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto;
+        position: absolute;
+        transform: translateX(2px);
+    }
+}

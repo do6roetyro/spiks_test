@@ -1,0 +1,47 @@
+@use "../../../lib/scss/_flex.scss" as flex;
+@use "../../../config/scss/_font.scss" as font;
+@use '../../../config/scss/_breakpoints.scss' as breakpoints;
+
+.form {
+    @include flex.col;
+    gap: 24px;
+}
+
+.form__sliders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+
+    @media (min-width: breakpoints.$md) {
+        justify-content: flex-start;
+        gap: 27px;
+    }
+}
+
+.form__container {
+    @include flex.row;
+    align-items: center;
+    gap: 10px;
+    min-height: 32px;
+
+    &:last-child {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.form__result-value {
+    padding-right: 20px;
+    font-weight: font.$weight-semibold;
+    align-self: flex-start;
+    flex-shrink: 0
+}
+
+.form__badge {
+    @include flex.row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
