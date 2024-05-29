@@ -1,3 +1,7 @@
+## githubpages
+
+https://do6roetyro.github.io/spiks_test/
+
 ## Команды
 
 Запустить проект
